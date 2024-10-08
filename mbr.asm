@@ -1,7 +1,7 @@
 bits 16 ;nasm directive (as opposed to an asm operation) to output 16-bit operations
 org 0x7c00
 
-KERNEL_OFFSET equ 0x1000 ; specify where we'll load kernel to later
+KERNEL_OFFSET equ 0x1000 ; specify where to load the kernel (C code) into RAM. 0x1000 is a convention
 
 mov [BOOT_DRIVE], dl ; BIOS implicity loads boot drive in dl; lets store for later use
 

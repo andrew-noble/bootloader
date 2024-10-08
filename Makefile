@@ -15,10 +15,10 @@ kernel-entry.o: kernel-entry.asm
 kernel.o: kernel.c
 	gcc -fno-pie -m32 -ffreestanding -c $< -o $@
 
-boot.bin: boot.asm
+mbr.bin: mbr.asm
 	nasm $< -f bin -o $@
 
-os-image.bin: boot.bin kernel.bin
+os-image.bin: mbr.bin kernel.bin
 	cat $^ > $@
 
 run: os-image.bin
