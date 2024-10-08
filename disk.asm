@@ -1,4 +1,4 @@
-;this procedure/function is called by the bootloader to load memory from the disk into RAM via 0x13 BIOS interrupt
+;this procedure/function is called by the bootloader to load kernel from the disk into RAM via 0x13 BIOS interrupt
 
 disk_load:
     pusha ;pushes all general use registers ax, bx, cx, dx onto the stack
