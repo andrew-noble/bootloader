@@ -14,7 +14,7 @@ halt:
     hlt ; halt execution
 hello: db "Hello world!",0
 
-times 510 - ($-$$) db 0 ; pad remaining 510 bytes with zeroes
+times 510 - ($-$$) db 0 ; pad whats remaining of the 510 bytes with zeroes
 dw 0xaa55 ; magic bootloader magic - marks this 512 byte sector bootable!
 
 ;this is a bootloader itself, that displays Hello, World! FYI this is x86 assembly
